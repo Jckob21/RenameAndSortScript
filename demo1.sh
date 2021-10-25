@@ -25,8 +25,10 @@ for x in $(cat filenames.txt); do
 			echo "Too many files, unexpected behaviour might occur"
 		fi
 		newName=${newName}${i}
+		
+		#Renaming file
 		echo "renaming file number $x to the name $newName";
-		#mv $x $newName
+		mv $x $newName
 		i=$((i+1))
 	fi
 done
